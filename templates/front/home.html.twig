@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Page d'accueil{% endblock %}
+
+{% block body %}
+    <header class="segment ui raised center aligned violet">
+        <h2>{{ titre }}</h2> {# récupération du titre #}
+    </header>
+    <p>
+        {{ include("front/template_part/_menu.html.twig",{currentPage: 0}) }}
+{#        {% for val in tableau %} #}{# boucle mon tableau d'arguments  #}
+{#            {% if val matches '/^\\d+$/' %}#}
+{#                <a href="{{ path("app_page", { numPage: val }) }}">un lien page</a>#}
+{#            {% else %}#}
+{#                <a href="{{ path("app_slug", { slug: val }) }}">un lien slug</a>#}
+{#            {% endif %}#}
+{#            <a href="/page/{{ val }}">Page {{ val }}</a>&nbsp;#}
+{#        {% endfor %}#}
+    </p>
+{#    <p><a href='/page/1'>Page 1</a>&nbsp; <a href='/page/2'>Page 2</a></p>#}
+    <h5>Articles</h5>
+    {{ render(path("listeVoiture")) }}
+    {{ render(controller('App\\Controller\\HomeController::listeVoiture')) }}
+{#    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.#}
+{#        Accusantium alias commodi deserunt eius eligendi esse facere,#}
+{#        impedit labore nemo placeat repudiandae tenetur, ut? Ea illo,#}
+{#        molestiae officia quo similique voluptate.</p>#}
+{% endblock %}

@@ -1,0 +1,7 @@
+{% for num in [1,2,3,4] %}
+    {% if num != currentPage %}
+        <a href="{{ path('app_page', {numPage: num}) }}" class="ui button">
+            Page {{ num }}
+        </a>&nbsp;
+    {% endif %}
+{% endfor %}

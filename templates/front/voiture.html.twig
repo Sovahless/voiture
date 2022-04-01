@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Article{% endblock %}
+
+{% block body %}
+    <header class="segment ui raised center aligned green">
+        <h2>{{ article['titre'] }}</h2> {# récupération du titre #}
+
+    </header>
+    <p>
+    {{ include("front/template_part/_menu.html.twig",{currentPage: 0}) }}
+        <a href='{{ path('home') }}' class="ui button">retour</a>
+    </p>
+    <p>
+        {{ article['resume'] }}
+    </p>
+
+{% endblock %}

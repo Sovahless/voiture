@@ -1,0 +1,16 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+#app_home:
+#  path: /home
+#  controller: App\Controller\HomeController::welcome
+
+#app_page:
+#  path: /page/{numPage}
+#  controller: App\Controller\HomeController::pages
+#  methods: GET
+
+#app_page2:
+#  path: /pageDeux
+#  controller: App\Controller\HomeController::pageDeux

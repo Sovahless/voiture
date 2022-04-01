@@ -1,0 +1,26 @@
+<div class="ui cards">
+{% for article in articles %}
+    <div class="ui card">
+        <div class="image">
+            <img src="{{ asset("images/article.png") }}">
+        </div>
+        <div class="content">
+            <div class="header">
+                {{ article['titre'] }}
+            </div>
+        </div>
+        <div class="content">
+            <div class="ui small feed">
+                <div class="event">
+                    <div class="content">
+                        <div class="summary">
+                            <p>{{ article['resume'] }}</p>
+                            <a class="ui button" href="{{ path('article', {numArt: (loop.index -1)}) }}">{{ article['titre'] }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>

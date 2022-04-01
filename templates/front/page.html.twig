@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Page {{ numPage }}{% endblock %}
+{% block body %}
+    <header class="segment ui raised center aligned red">
+        <h2>Vous êtes sur la page {{ numPage }}</h2> {# récupération du titre #}
+    </header>
+
+    <p>
+        {{ include("front/template_part/_menu.html.twig",{currentPage: numPage}) }}
+        <a href='{{ path('home') }}' class="ui button">retour</a>
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Accusantium alias commodi deserunt eius eligendi esse facere,
+        impedit labore nemo placeat repudiandae tenetur, ut? Ea illo,
+        molestiae officia quo similique voluptate.</p>
+{% endblock %}
